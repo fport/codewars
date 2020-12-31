@@ -1,12 +1,16 @@
-const digital_root = (n) => {
-  if (n < 10) return n;
-  let out = 0;
-  while (n > 0) {
-    out += Math.floor(n % 10);
-    n = n / 10;
-  }
-  return digital_root(out);
-};
+function digital_root(n) {
+  return ((n - 1) % 9) + 1;
+}
+
+// const digital_root = (n) => {
+//   if (n < 10) return n;
+//   let out = 0;
+//   while (n > 0) {
+//     out += Math.floor(n % 10);
+//     n = n / 10;
+//   }
+//   return digital_root(out);
+// };
 
 // function digital_root(n) {
 //   const arr = n.toString().split("");
